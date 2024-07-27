@@ -6,7 +6,7 @@ primero se crea el componente dentro de app (o donde sea)
 
 
 ---------------
-
+ 
 
 CHULETA ANGULAR
 
