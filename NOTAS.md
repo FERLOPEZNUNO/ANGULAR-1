@@ -50,6 +50,8 @@ OJOOOO: Si da un error de algo de ps1 no se puede cargar porque los scripts esta
 
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
 
+10.- actualizar favicon: se cambia el favicon por otro de tipo .ico y se hace ctrl +f5 en el navegador para flushear la cache.
+
 ----------
 
 ASSETS folder a veces da problemas. hen angular.jonson ha de salir esto:

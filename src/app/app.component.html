@@ -19,7 +19,7 @@
       [havattar]="users[1].avatar" 
       [name]="users[1].name" 
       (seleccionar)="onSelectUserApp($event)"
-      />
+      /> 
     </li>
     <li>
       <app-user 
@@ -29,7 +29,7 @@
       (seleccionar)="onSelectUserApp($event)"
       />
     </li>
-    <li>
+    <li> 
       <app-user 
       [id]="users[3].id" 
       [havattar]="users[3].avatar" 
@@ -40,5 +40,7 @@
 
   </ul>
 
-  INFO DEL DOG
+ <app-task [dogName]="selectedDog.name"/>
+
+   
 </main>

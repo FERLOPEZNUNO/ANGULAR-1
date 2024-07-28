@@ -19,7 +19,7 @@ export class UserComponent {
   //ponemos ! despues del nombre para que no de error diciendonos que la variable no esta inicializada:
   @Input({required:true}) id!: string;
   @Input({required: true}) havattar!:string;
-  @Input({required:true}) name!:string;
+  @Input({required:true}) name!:string; 
 
   //para hacer esto mismo con signals, habría que importar en 1er lugar "input" (con i minus), que es una funcion especial, además de Input (el decorator),
   // y quedaría algo como lo de abajo. lo que se pone entre <> es lo que se espera recibir (un string, la ruta de la foto).
@@ -36,7 +36,7 @@ export class UserComponent {
   //solo que con output (o minus) te lo crea angular automaticamente. el html se deja EXACTAMENTE IGUAL!!
   //la razón de usar esto en lugar de lo otro es que esto es literalmente 5 o 6 caracteres mas corto que lo otro... 
 
-  get imagePath(){ 
+  get imagePath(){  
     return 'assets/users/' + this.havattar
   }
 
