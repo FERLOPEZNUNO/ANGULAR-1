@@ -1,5 +1,44 @@
-<header>
-  <img src="assets/logo.png" alt="The Angular logo: The letter 'A'" />
-  <h1>Let's get started!</h1>
-  <p>Time to learn all about Angular!</p>
-</header>
+<app-header />
+
+<main>
+  <ul id="users">
+    <li>
+      <!--el "seleccionar es un EVENT BINDING. los otros 3 son property bindings. son imputs, el selec es OUTPUT."
+      entre los parentesis del onSelectuserGlobal se ha de poner lo que queremos EMITIR, en este caso, la ID que se está emitiendo
+      desde el método onSelectUser de user.comp... - se hace poniendo $event. esto lo coge automáticamente. -->
+      <app-user 
+        [id]="users[0].id" 
+        [havattar]="users[0].avatar" 
+        [name]="users[0].name" 
+        (seleccionar)="onSelectUserApp($event)"
+        />
+    </li>
+    <li>
+      <app-user 
+      [id]="users[1].id" 
+      [havattar]="users[1].avatar" 
+      [name]="users[1].name" 
+      (seleccionar)="onSelectUserApp($event)"
+      />
+    </li>
+    <li>
+      <app-user 
+      [id]="users[2].id" 
+      [havattar]="users[2].avatar" 
+      [name]="users[2].name" 
+      (seleccionar)="onSelectUserApp($event)"
+      />
+    </li>
+    <li>
+      <app-user 
+      [id]="users[3].id" 
+      [havattar]="users[3].avatar" 
+      [name]="users[3].name" 
+      (seleccionar)="onSelectUserApp($event)"
+      />
+    </li>
+
+  </ul>
+
+  INFO DEL DOG
+</main>

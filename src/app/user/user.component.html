@@ -1,0 +1,54 @@
+<div>
+    <button (click)="onSelectUser()">
+        <!--llamamos al metodo imagePath, que nos dara la ruta de la foto:-->
+        <img [src]="imagePath" [alt]="name"/>
+        <span>{{name}}</span>
+    </button>
+</div>
+
+
+
+<!-- CON SIGNAL: 
+<div>
+
+    añadimos 1 event listener al boton: esto hara que cuando se clique, ocurra X. 
+     Entre las comillas va el codigo (o la llamada al metodo de .ts que lo hace, como en este caso)
+    <button (click)="onSelectUser()" >
+         para poner la foto se usa la metodologia "property binding". se pone [] en el nombre de la property que queremos configurar. 
+         lo que hacemos es poner la ruta + selectedUser.avatar:  
+         <img [src]=" 'assets/users/'  + selectedUser.avatar" />
+         lo mas correcto, por eso, es usar un getter. ver user.component.ts :  
+        <img [src]="imagePath()" />
+        <span>        
+            con signals se hace igual que abajo, pero añadiendo () después del propery que guarda la señal 
+            {{selectedUser().name}}
+        </span>
+    </button>
+    
+    </div>
+-->
+
+<!-- SIN SIGNALS: 
+
+<div>
+
+añadimos 1 event listener al boton: esto hara que cuando se clique, ocurra X. 
+ Entre las comillas va el codigo (o la llamada al metodo de .ts que lo hace, como en este caso)
+
+<button (click)="onSelectUser()" >
+     para poner la foto se usa la metodologia "property binding". se pone [] en el nombre de la property que queremos configurar. 
+     lo que hacemos es poner la ruta + selectedUser.avatar:  
+
+     <img [src]=" 'assets/users/'  + selectedUser.avatar" />
+
+     lo mas correcto, por eso, es usar un getter. ver user.component.ts :   
+
+    <img [src]="imagePath" />
+    <span>        
+        para acceder a propiedades publicas (lo son por defecto) como el selectedUser, se usa {{}} 
+        aqui vamos a coger el name (esto se llama string interpolation): 
+        {{selectedUser.name}}
+    </span>
+</button>
+
+</div>-->
